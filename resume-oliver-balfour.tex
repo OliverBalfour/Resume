@@ -1,0 +1,132 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{classic}
+\moderncvicons{awesome}
+\nopagenumbers{}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.8, top=2cm, bottom=1.5cm]{geometry}
+\usepackage{multicol}
+\usepackage{footmisc}
+\usepackage{fontawesome}
+\input{subsubheading}
+\newcommand{\setmargin}[1]{\setlength{\hintscolumnwidth}{#1}}
+% This is where the date column width is set
+\newcommand{\resetmargin}{\setmargin{2cm}}
+\newcommand{\nomargin}{\setmargin{0cm}}
+% This is color1 (main color for blue moderncv) but darker (https://hslpicker.com/#2b5888)
+\definecolor{MyLinkColor}{HTML}{2b5888}
+\newcommand{\mylink}[2]{\href{#1}{\textcolor{MyLinkColor}{#2}}}
+\resetmargin{}
+
+% Programming language pills
+\usepackage{tcolorbox}
+\newtcbox{\mypill}{on line,
+	% background and border colour = 17% navy blue, the rest white
+	arc=7pt,colback=NavyBlue!17!white,colframe=NavyBlue!17!white,
+	before upper={\rule[-3pt]{0pt}{10pt}},boxrule=0pt,
+	boxsep=0pt,top=2pt,bottom=0.5pt,
+	extrude left by=2pt,left=3pt,
+	extrude right by=2pt,right=3pt,
+	% text color = 10% navy blue, the rest black
+	coltext=NavyBlue!10!black}
+
+\renewcommand*{\namefont}{\fontsize{22}{34}\mdseries\upshape}
+\name{Oliver}{Balfour}
+
+% \address{Canberra, Australia}
+% \phone[mobile]{+61~434~853~662}
+\email{oliver.leo.balfour@gmail.com}
+\extrainfo{\href{https://github.com/OliverBalfour}{\faicon{github} OliverBalfour}}
+
+\begin{document}
+	\makecvtitle
+	\kern -1.5em
+
+	\section{Experience}
+
+	% Fracta
+	%\cvitem{8/2026--present}{\textbf{Fracta}, \textit{Founding Engineer}.\newline%
+	%Building a startup marketplace for collectibles.}
+
+	% Jane Street HK full time
+	\cvitem{9/2024--2/2025}{\textbf{Jane Street}, \textit{Software Engineer (Hong Kong)}.\newline%
+	Collaborated on software for the equities trading desk.}
+
+	% Jane Street London
+	\cvitem{7-9/2023}{\textbf{Jane Street}, \textit{Software Engineer Intern (London)}.\newline%
+	Built a distributed machine learning training pipeline. Improved a risk management system.}
+
+	% Jane Street HK
+	\cvitem{12/2022--2/2023}{\textbf{Jane Street}, \textit{Software Engineer Intern (Hong Kong)}.\newline%
+	Improved a \mypill{Rust} library for writing \mypill{Python} modules using \mypill{OCaml} code. Built a debugging tool for a financial event processing pipeline.}
+
+	% Redwood
+	\cvitem{10--12/2022}{\textbf{Redwood Research}, \textit{Machine Learning Researcher} \textit{(remote contract)}.\newline%
+	Worked on a \mylink{https://github.com/redwoodresearch/rust_circuit_public}{tensor network compiler} with \mypill{Rust} and \mypill{PyTorch} and a \mylink{https://github.com/redwoodresearch/interp}{visualization tool} for LLM interpretability research. Contributed to research on LLM \mylink{https://www.alignmentforum.org/posts/RKDQCB6smLWgs2Mhr/multi-component-learning-and-s-curves}{multi-component learning}.}
+
+	% MLAB
+	\cvitem{8/2022}{\textbf{Redwood Research}, \textit{Machine Learning Alignment Bootcamp} \textit{(attendee)}.\newline%
+	Built transformer language models (BERT, GPT-2), computer vision models (ResNet) and RL algorithms (DQN, PPO) from the ground up.}
+
+	% Liquid
+	\cvitem{1/2020--10/2022}{\textbf{Liquid Instruments}, \textit{Software Developer} (previously \textit{Test Engineering Intern}).
+	\begin{itemize}
+		\item Worked on a Windows \& Mac app for controlling scientific instruments in \mypill{C++} and \mypill{Qt}.
+		\item Built a declarative UI framework, a data export dialog, etc.
+		\item Wrote a native scientific graphing library with \mypill{C++} and \mypill{Vulkan}.
+		\item Developed an automated UI testing framework for an iPad app in \mypill{Swift}.
+	\end{itemize}}
+	% \kern -1.2em
+
+	% CSSA
+	\cvitem{2021}{\textbf{ANU Computer Science Students' Association}, \textit{Vice-President}.
+	\begin{itemize}
+		\item Organised events such as a hackathon, careers fair, and games nights with 100+ attendees.
+		\item Launched and helped build the \mylink{https://timetable.cssa.club/}{ANU Unofficial Timetable} \mypill{React} app.
+	\end{itemize}}
+	% \kern -1.2em
+
+	\section{Projects}
+
+	% Rocketry
+	\cvitem{2021--2022}{\textbf{\mylink{https://github.com/ANU-Rocketry/control-panel}{ANU Rocketry Control Panel}}.
+	Built an end-to-end system for remotely controlling our liquid rocket engine testing platform with a team of 5.}
+
+	% Lambda
+	\cvitem{2021}{\textbf{\mylink{https://lambdaconsulting.com.au/}{Lambda Consulting}}.
+	Built a cross-platform loyalty app for a local business with \mypill{Flutter}.}
+
+	% Associate Law
+%	\cvitem{2021}{\textbf{Case Law Search Engine}.
+%	Oversaw development of a language-model based search engine.}
+
+	% Profunctor optics
+	\cvitem{2021}{\textbf{\mylink{https://github.com/OliverBalfour/ProfunctorOptics}{Verified Profunctor Optics}}.
+	Formally verified \mypill{Idris} profunctor lenses and prisms.}
+
+	% Calculator
+	\cvitem{2020}{\textbf{\mylink{https://github.com/OliverBalfour/Calculator}{Calculator}}.
+	\mypill{Haskell} parser combinator calculator supporting automatic differentiation.}
+
+	% Mirror
+	\cvitem{2020}{\textbf{\mylink{http://github.com/OliverBalfour/Mirror}{Mirror App}}.
+	Kanban board and notes \mypill{React} app with cross-device synchronisation.}
+
+	% Diabetic Retinopathy
+	\cvitem{2019}{\textbf{\mylink{https://drive.google.com/file/d/1rSDY9Rh5cgG4qr7wG3jjNtIcseixEiTM/view?usp=sharing}{Diabetic Retinopathy Diagnosis with Computer Vision}}.
+	\begin{itemize}
+		\item Used deep learning for eye disease diagnosis, achieving 94\% specificity.
+		\item 3rd in Engineering in the Australian \textit{\mylink{https://blog.csiro.au/award-winning-stem-students/}{BHP Foundation Science Awards}}.
+	\end{itemize}}
+	% \kern -1.2em
+	
+	\section{Education}
+	\cvitem{2021--2024}{\textbf{Bachelor of Science}, \textit{Australian National University}.%
+	\begin{itemize}
+		\item \textbf{Mathematics} and \textbf{Computer Science} majors.
+		\item ANU All-Rounder Scholarship recipient.
+%		\item Offered the Open Philanthropy Undergraduate Scholarship to study abroad.
+	\end{itemize}}
+	\kern -1.2em
+%	\cvitem{2019--2020}{\textbf{Canberra College}, \textit{dux (valedictorian), 99.75 percentile rank}.}
+
+\end{document}
